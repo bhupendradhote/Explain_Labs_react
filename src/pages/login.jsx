@@ -323,7 +323,7 @@ const Login = () => {
 
           .google-btn {
             padding: 14px 20px;
-            border-radius: 12px;
+            border-radius: 50px;
             background: #ffffff;
             border: 1.5px solid #DBDBDB;
             font-size: 18px;
@@ -345,12 +345,13 @@ const Login = () => {
             margin-top: 32px;
             text-align: center;
             color: #6b7280;
-            font-size: 14px;
+            font-size: 16px;
+                font-weight: 400;
+
           }
 
           .signup-link {
                 color: #000000c2;
-                font-weight: 500;
                 cursor: pointer;
                 transition: color 0.2s ease;
           }
