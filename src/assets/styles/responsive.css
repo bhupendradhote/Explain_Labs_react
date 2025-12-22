@@ -1,151 +1,296 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .login-card {}
+	.login-card {}
 
-  .left-overlay {
-    left: 32px;
-    bottom: 32px;
-    right: 32px;
-  }
+	.left-overlay {
+		left: 32px;
+		bottom: 32px;
+		right: 32px;
+	}
 
-  .left-title {
-    font-size: 36px !important;
-  }
+	.left-title {
+		font-size: 36px !important;
+	}
 
-  .right-card {
-    padding: 48px;
-  }
+	.right-card {
+		padding: 48px;
+	}
 
-  .welcome {
-    font-size: 32px !important;
-  }
+	.welcome {
+		font-size: 32px !important;
+	}
 
-  .subtitle {
-    font-size: 16px !important;
+	.subtitle {
+		font-size: 16px !important;
+	}
 
-  }
+	.pricing-grid {
+		gap: 20px !important;
+		width: 98% !important;
+	}
+
+	.card-header-absolute {
+		width: 31.7% !important;
+	}
+
+	.faq-section {
+		width: 98% !important;
+	}
+}
+@media (max-width: 900px) {
+.footer-bg-text span {
+    font-size: 7.7rem !important;
+}
+
 }
 
 @media (max-width: 768px) {
-  .login-card {
-    flex-direction: column;
-    border-radius: 16px;
-    height: auto !important;
-    min-height: auto !important;
-  }
+	.login-card {
+		flex-direction: column;
+		border-radius: 16px;
+		height: auto !important;
+		min-height: auto !important;
+	}
 
-  .left-card {
-        min-height: 175px !important;
-  }
+	.left-card {
+		min-height: 175px !important;
+	}
 
-  .right-card {
-    border-radius: 0 0 16px 16px;
-    padding: 40px 32px;
-    flex: 1;
+	.right-card {
+		border-radius: 0 0 16px 16px;
+		padding: 40px 32px;
+		flex: 1;
+	}
+
+	.left-overlay {
+		left: 22px !important;
+		bottom: 22px !important;
+		right: 22px !important;
+	}
+
+	.left-title {
+		font-size: 28px !important;
+	}
+
+	.welcome {
+		font-size: 28px !important;
+	}
+
+	.form-wrap {
+		max-width: 100% !important;
+	}
+
+	.pricing-card {
+		margin-top: 0;
+		width: 100% !important;
+        z-index: 3 !important;
+	}
+
+	.faq-section {
+		grid-template-columns: 1fr;
+		width: 100% !important;
+	}
+     .footer-bg-text span {
+    font-size: 6.3rem !important; /* Smaller text for mobile */
   }
-.left-overlay {
-    left: 22px !important;
-    bottom: 22px !important;
-    right: 22px !important;
 }
-  .left-title {
-    font-size: 28px !important;
-  }
+@media (max-width: 600px) {
+	.pricing-grid {
+		flex-direction: column !important;
+		align-items: center !important;
+        margin: 0 auto 46px;
+		width: 100% !important;
 
-  .welcome {
-    font-size: 28px !important;
-  }
-
-  .form-wrap {
-        max-width: 100% !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .login-page {
-    padding: 6px !important;
-  }
-
-  .login-container {
-    padding: 0 !important;
+	}
+.navbar
+ {
+    padding: 16px !important;
     max-width: 100% !important;
-    height: 100vh !important;
-  }
+}
 
-  .login-card {
-    min-height: 700px;
-     padding: 0 !important;
-  }
+.logo
+ {
+     width: 150px !important;
+}
 
-  .left-card {
-            height: 140px !important;
-        min-height: 160px !important;
-        /* display: none; */
-        margin-bottom: 25px !important;
-  }
 
-  .left-overlay {
-    left: 20px !important;
-    bottom: 28px !important;
-    right: 20px !important;
-  }
 
-  .brand-row {
-    margin-bottom: 16px !important;
-  }
+        .card-header-absolute {
+        width: 98% !important;
+    }
 
-  .left-title {
-    font-size: 18px !important;
-  }
+}
+@media (max-width: 480px) {
+	.login-page {
+		padding: 6px !important;
+	}
 
-  .right-card {
-    padding: 15px !important;
-    align-items: flex-start !important;
-  }
+	.login-container {
+		padding: 0 !important;
+		max-width: 100% !important;
+		height: 100vh !important;
+	}
 
-  .welcome {
-    font-size: 22px !important;
+	.login-card {
+		min-height: 700px;
+		padding: 0 !important;
+	}
 
-  }
+	.left-card {
+		height: 140px !important;
+		min-height: 160px !important;
+		/* display: none; */
+		margin-bottom: 25px !important;
+	}
 
-  .subtitle {
+	.left-overlay {
+		left: 20px !important;
+		bottom: 28px !important;
+		right: 20px !important;
+	}
+
+	.brand-row {
+		margin-bottom: 16px !important;
+	}
+
+	.left-title {
+		font-size: 18px !important;
+	}
+
+	.right-card {
+		padding: 15px !important;
+		align-items: flex-start !important;
+	}
+
+	.welcome {
+		font-size: 22px !important;
+
+	}
+
+	.subtitle {
+		font-size: 12px !important;
+		margin-bottom: 28px !important;
+	}
+
+	.label {
+		font-size: 16px !important;
+		margin-bottom: 6px !important;
+	}
+
+	.input {
+		padding: 12px 14px !important;
+		margin-bottom: 14px !important;
+		font-size: 14px !important;
+
+	}
+
+	.login-btn {
+		padding: 14px 20px !important;
+		margin-bottom: 0 !important;
+		font-size: 14px !important;
+
+	}
+
+	.or-divider {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		margin: 18px 0 !important;
+	}
+
+	.or-text {
+		font-size: 16px !important;
+	}
+
+	.google-btn {
+		border: 1px solid #DBDBDB !important;
+		font-size: 14px !important;
+	}
+
+	.signup {
+		margin-top: 14px !important;
+		font-size: 14px !important;
+	}
+/* ------------------------------------- pricing --------------------- */
+.main-content {
+    margin: 70px auto 20px !important;
+    padding: 0 14px !important;
+}
+    .pricing-header h1 {
+    font-size: 25px !important;
+}
+.breadcrumbs {
     font-size: 12px !important;
-    margin-bottom: 28px !important;
-  }
-.label {
-    font-size: 16px !important;
-    margin-bottom: 6px !important; 
+    font-weight: 600 !important;
 }
-  .input {
-    padding: 12px 14px !important;
-    margin-bottom: 14px !important;
-    font-size: 14px !important;
-
-  }
-
-  .login-btn {
-    padding: 14px 20px !important;
+.pricing-header {
     margin-bottom: 0 !important;
-    font-size: 14px !important;
-
-  }
-
-  .or-divider {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin: 18px 0 !important;
 }
-.or-text {
+.card-header-absolute
+ {
+    font-size: 13px !important;
+}
+.card-header-row h3 {
+    font-size: 18px !important;
+}
+.old-price {
+    font-size: 13px !important;
+}
+.card-desc {
+    font-size: 12px !important;
+    margin-bottom: 10px !important;
+}
+.card-credits {
+    font-size: 14px;
+    margin-bottom: 15px !important;
+}
+.ma-b, .faq-section, .footer-links-grid
+ {
+    margin-bottom: 15px !important;
+}
+.price {
+    font-size: 32px;
+    font-weight: 400;
+    color: #262627;
+}
+.period {
+    color: #808080;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 9px;
+}
+.promo-badge, .dummy-text,.faq-answer {
+    font-size: 11px;
+}
+.faq-question {
+    font-size: 14px !important;
+}
+.faq-label {
+    right: 5px;
+
+}
+.faq-label p {
+    font-size: 34px;
+}
+.footer {
+        padding: 35px 15px;
+    }
+.footer-top {
+            margin-bottom: 32px;
+    }
+    .footer-column h4 {
     font-size: 16px !important;
 }
-.google-btn {
-
-    border: 1px solid #DBDBDB !important;
-    font-size: 14px !important;
+.footer-column a {
+    font-size: 12px !important;
 }
-.signup {
-    margin-top: 14px !important;
-    font-size: 14px !important;
+.footer-column li {
+    margin-bottom: 5px !important;
+}
+  .footer-bottom {
+    font-size: 12px;
+  }
+  .social-links {
+    gap: 8px;
 }
 }

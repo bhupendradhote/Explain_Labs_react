@@ -8,25 +8,36 @@
 
 /* --- Top Banner --- */
 .top-banner {
-  background-color: #1a1a2e;
-  color: white;
-  text-align: center;
-  padding: 8px 0;
-  font-size: 12px;
+      background-color: #5236AC;
+    color: white;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px; 
+    margin-bottom: 8px;
 }
 
 .banner-text {
   opacity: 0.8;
+color: #FFFFFF;
+font-size: 16px;
+}
+
+.banner-text span{
+font-weight: 700;
 }
 
 .banner-btn {
-  margin-left: 8px;
-  background-color: white;
-  color: black;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 10px;
-  font-weight: bold;
+     margin-left: 8px;
+    background-color: white;
+    color: black;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 10px;
+    font-weight: bold;
 }
 
 /* --- Navbar --- */
@@ -35,36 +46,21 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px 24px;
-  max-width: 1280px;
-  margin: 0 auto;
+  max-width: 1350px;
+  margin: 0 auto 10px;
   position: relative; /* Needed for mobile menu positioning */
 }
 
 .logo {
-  font-weight: bold;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
   color: #000;
+  width: 180px;
 }
 .footer-logo-style{
   color: #fff;
 
 }
 
-.logo-box {
-  width: 24px;
-  height: 24px;
-  background-color: black;
-      border: 1px solid #000;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 2px;
-  font-size: 14px;
-}
+
 
 .nav-links {
   display: flex;
@@ -76,14 +72,73 @@
 
 .nav-links a {
   text-decoration: none;
-  color: inherit;
-  display: flex;
-  align-items: center;
-  gap: 4px;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #262627;
 }
 
 .nav-links a:hover {
   color: black;
+}
+/* Dropdown Wrapper */
+.nav-item {
+  position: relative;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  min-width: 180px;
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  padding: 8px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  z-index: 1000;
+}
+
+/* Dropdown Links */
+.dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background: #f5f7fa;
+  color: #000;
+}
+
+/* Show on Hover */
+.nav-item:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Mobile: disable hover dropdown */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    background: transparent;
+    padding-left: 16px;
+  }
 }
 
 .nav-auth {
@@ -131,16 +186,15 @@
    ========================================= */
 
 .footer {
-  background-color: #1a1a1a;
+  background-color: #1B1B1B;
   color: white;
   padding: 64px 24px 32px;
   position: relative;
-  overflow: hidden;
   margin-top: auto; /* Ensures footer stays at bottom if content is short */
 }
 
 .footer-container {
-  max-width: 1280px;
+  max-width: 1180px;
   margin: 0 auto;
   position: relative;
   z-index: 10;
@@ -163,18 +217,18 @@
 }
 
 .footer-cta h3 {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 26px;
+  font-weight: 600;
   margin-bottom: 16px;
 }
 
 .footer-signup-btn {
-  background-color: #5D3FD3;
+  background-color: #5236AC;
   color: white;
   padding: 8px 24px;
   border-radius: 999px;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .footer-links-grid {
@@ -182,14 +236,14 @@
   grid-template-columns: repeat(6, 1fr);
   gap: 32px;
   margin-bottom: 64px;
-  border-top: 1px solid #374151;
+  border-top: 1px solid #404040;
   padding-top: 40px;
 }
 
 .footer-column h4 {
-  color: #9ca3af;
-  font-size: 12px;
-  font-weight: bold;
+  color: #656565;
+  font-size: 20px;
+  font-weight: 600;
   margin-bottom: 16px;
   text-transform: uppercase;
 }
@@ -199,13 +253,14 @@
 }
 
 .footer-column li {
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 }
 
 .footer-column a {
   text-decoration: none;
-  color: #6b7280;
-  font-size: 11px;
+  font-weight: 400;
+  color: #DFDFDF;
+  font-size: 13px;
   transition: color 0.2s;
 }
 
@@ -216,10 +271,12 @@
 .footer-bottom {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid #374151;
-  padding-top: 32px;
-  font-size: 10px;
-  color: #6b7280;
+  border-top: 1px solid #404040;
+  border-bottom: 1px solid #404040;
+  padding: 22px 0;
+  font-size: 14px;
+  color: #FFFFFF;
+  margin-bottom: 22px;
 }
 
 .social-links {
@@ -235,24 +292,28 @@
 .social-links a:hover {
   color: white;
 }
-
 .footer-bg-text {
-  position: absolute;
-  bottom: -50px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  pointer-events: none;
-  opacity: 0.05;
+    background: #1B1B1B;
+    position: absolute;
+    width: 100%;
+    left: -10px;
+    overflow: hidden; /* important */
 }
 
 .footer-bg-text span {
-  font-size: 12rem;
-  font-weight: 900;
-  line-height: 1;
-  color: white;
-  white-space: nowrap;
+    display: block;          /* remove inline spacing */
+    font-size: 12.95rem;
+    font-weight: 900;
+    line-height: 0.74;       /* reduce top/bottom gap */
+    white-space: nowrap;
+
+    background: linear-gradient(90deg, #093E40 0%, #322C44 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
+
 
 /* =========================================
    RESPONSIVE MEDIA QUERIES
@@ -296,12 +357,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .footer-bottom {
-    flex-direction: column;
-    gap: 16px;
-  }
 
-  .footer-bg-text span {
-    font-size: 4rem; /* Smaller text for mobile */
-  }
+
+ 
 }

@@ -10,53 +10,7 @@ import Footer from '../components/layout/Footer';
 import pricingImage from '../assets/images/pricing.jpg';
 
 const PricingPage = () => {
-  const [billingCycle, setBillingCycle] = useState('yearly');
   const [openFaq, setOpenFaq] = useState(1);
-
-  const plans = [
-    {
-      name: 'Free',
-      description: 'For Creators Making Premium Content For Global Audiences',
-      credits: '10k Credits/Month',
-      price: '$0',
-      period: 'Per Month',
-      features: ['Everything in Starter, Plus', 'Professional Voice Cloning'],
-      cta: 'Get Started',
-      highlight: false
-    },
-    {
-      name: 'Creator',
-      description: 'For Creators Making Premium Content For Global Audiences',
-      credits: '100k Credits/Month',
-      price: '$11',
-      oldPrice: '$22',
-      period: 'Per Month',
-      badge: 'First Month 50% Off',
-      features: [
-        'Everything in Starter, Plus',
-        'Professional Voice Cloning',
-        'Usage Based Billing For Additional Credits',
-        'Higher Quality Audio 192 Kbps'
-      ],
-      cta: 'Get Started',
-      highlight: true,
-      popular: true
-    },
-    {
-      name: 'Pro',
-      description: 'For Creators Ramping Up Their Content Production',
-      credits: '500k Credits/Month',
-      price: '$99',
-      period: 'Per Month',
-      features: [
-        'Everything in Creator, Plus',
-        '300 Minutes Of High-Quality Text To Speech',
-        '1,100 Minutes Of Agents'
-      ],
-      cta: 'Get Started',
-      highlight: false
-    }
-  ];
 
   const faqs = [
     {
@@ -84,121 +38,200 @@ const PricingPage = () => {
       <Header />
 
       {/* Main Content */}
-            {/* Header Section */}
-        <div className="pricing-header">
-          <h1>Pricing</h1>
-          <p className="subtitle">Plans built for creators and business of all sizes</p>
-          <div className="breadcrumbs">Home &gt; Pricing</div>
+      <div className="pricing-header">
+        <h1>Pricing</h1>
+        <p className="subtitle">Plans built for creators and business of all sizes</p>
+        <div className="breadcrumbs">Home &gt; Pricing</div>
+      </div>
 
-          
-        </div>
       <main className="main-content">
-        
-  
-{/* Toggle */}
-          <div className="toggle-container">
-            <div className="toggle-bg">
-              <button 
-                onClick={() => setBillingCycle('monthly')}
-                className={`toggle-btn ${billingCycle === 'monthly' ? 'active' : ''}`}
-              >
-                Monthly Billed
-              </button>
-              <button 
-                onClick={() => setBillingCycle('yearly')}
-                className={`toggle-btn ${billingCycle === 'yearly' ? 'active dark' : ''}`}
-              >
-                Yearly Billed
+
+        {/* Pricing Cards Grid */}
+        <div className="pricing-grid">
+
+          {/* --- Free Card --- */}
+          <div className={`pricing-card`}>
+            <div className="card-content">
+              <div className="card-header-row">
+                <h3>Free</h3>
+                <span className="old-price">$22</span>
+              </div>
+
+              <p className="card-desc">For Creators Making Premium Content For Global Audiences</p>
+              <p className="card-credits ma-b">10k Credits/Month</p>
+
+              <div className="price-row">
+                <span className="price">$0</span>
+                <span className="period">Per Month</span>
+              </div>
+
+              <ul className="features-list">
+                <li>
+                  <div className="check-icon">
+                    <FaCheck size={8} />
+                  </div>
+                  <span>Everything in Starter, Plus</span>
+                </li>
+                <li>
+                  <div className="check-icon">
+                    <FaCheck size={8} />
+                  </div>
+                  <span>Professional Voice Cloning</span>
+                </li>
+
+                {/* <p className="dummy-text">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+                </p> */}
+              </ul>
+
+              <button className="card-cta">
+                Get Started <span className="arrow">›</span>
               </button>
             </div>
           </div>
-        {/* Pricing Cards Grid */}
-        <div className="pricing-grid">
-          {plans.map((plan, index) => (
-            <div 
-              key={index} 
-              className={`pricing-card ${plan.highlight ? 'highlight' : ''}`}
-            >
-              {plan.popular && (
-                <div className="popular-badge">Most Popular</div>
-              )}
-              
-              <div className="card-content">
-                <div className="card-header-row">
-                  <h3>{plan.name}</h3>
-                  {plan.oldPrice && <span className="old-price">{plan.oldPrice}</span>}
-                </div>
-                
-                <p className="card-desc">{plan.description}</p>
-                <p className="card-credits">{plan.credits}</p>
+        <div className="card-header-absolute">
+            Most Popular
+          </div>
+          {/* --- Creator Card (highlighted / most popular) --- */}
+          <div className={`pricing-card highlight`}>
 
-                {plan.badge && (
-                  <span className="promo-badge">{plan.badge}</span>
-                )}
-
-                <div className="price-row">
-                  <span className="price">{plan.price}</span>
-                  <span className="period">{plan.period}</span>
-                </div>
-
-                <ul className="features-list">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx}>
-                      <div className="check-icon">
-                        <FaCheck size={8} />
-                      </div>
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                  {plan.highlight && (
-                    <p className="dummy-text">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
-                    </p>
-                  )}
-                </ul>
-
-                <button className="card-cta">
-                  {plan.cta} <span className="arrow">›</span>
-                </button>
+            <div className="card-content">
+              <div className="card-header-row">
+                <h3>Creator</h3>
+                <span className="old-price">$22</span>
               </div>
+
+              <p className="card-desc">For Creators Making Premium Content For Global Audiences</p>
+              <p className="card-credits">100k Credits/Month</p>
+
+              <span className="promo-badge">First Month 50% Off</span>
+
+              <div className="price-row">
+                <span className="price">$11</span>
+                <span className="period">Per Month</span>
+              </div>
+
+              <ul className="features-list">
+                <li>
+                  <div className="check-icon">
+                    <FaCheck size={8} />
+                  </div>
+                  <span>Everything in Starter, Plus</span>
+                </li>
+                <li>
+                  <div className="check-icon">
+                    <FaCheck size={8} />
+                  </div>
+                  <span>Professional Voice Cloning</span>
+                </li>
+                <li>
+                  <div className="check-icon">
+                    <FaCheck size={8} />
+                  </div>
+                  <span>Usage Based Billing For Additional Credits</span>
+                </li>
+                <li>
+                  <div className="check-icon">
+                    <FaCheck size={8} />
+                  </div>
+                  <span>Higher Quality Audio 192 Kbps</span>
+                </li>
+
+                <p className="dummy-text">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+                </p>
+              </ul>
+
+              <button className="card-cta">
+                Get Started <span className="arrow">›</span>
+              </button>
             </div>
-          ))}
+          </div>
+
+          {/* --- Pro Card --- */}
+          <div className={`pricing-card`}>
+            <div className="card-content">
+              <div className="card-header-row">
+                <h3>Pro</h3>
+              </div>
+
+              <p className="card-desc">For Creators Ramping Up Their Content Production</p>
+              <p className="card-credits ma-b">500k Credits/Month</p>
+
+              <div className="price-row">
+                <span className="price">$99</span>
+                <span className="period">Per Month</span>
+              </div>
+
+              <ul className="features-list">
+                <li>
+                  <div className="check-icon">
+                    <FaCheck size={8} />
+                  </div>
+                  <span>Everything in Creator, Plus</span>
+                </li>
+                <li>
+                  <div className="check-icon">
+                    <FaCheck size={8} />
+                  </div>
+                  <span>300 Minutes Of High-Quality Text To Speech</span>
+                </li>
+                <li>
+                  <div className="check-icon">
+                    <FaCheck size={8} />
+                  </div>
+                  <span>1,100 Minutes Of Agents</span>
+                </li>
+
+                {/* <p className="dummy-text">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+                </p> */}
+              </ul>
+
+              <button className="card-cta">
+                Get Started <span className="arrow">›</span>
+              </button>
+            </div>
+          </div>
+
         </div>
 
         {/* FAQ Section */}
         <div className="faq-section">
-            <div className="faq-image">
-                <img 
-                    src={pricingImage} 
-                    alt="Abstract Visualization" 
-                />
-                 <div className="faq-label">FAQ</div>
+          <div className="faq-image">
+            <img src={pricingImage} alt="Abstract Visualization" />
+            <div className="faq-label">
+              <p className='faq-one'>F</p>
+              <p className='faq-two'>A</p>
+              <p className='faq-three'>Q</p>
             </div>
+          </div>
 
-            <div className="faq-list">
-                {faqs.map((faq, index) => (
-                    <div key={index} className="faq-item">
-                        <button 
-                            className="faq-question"
-                            onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
-                        >
-                            <span>{faq.question}</span>
-                            {openFaq === index ? <FaMinus size={12}/> : <FaPlus size={12}/>}
-                        </button>
-                        {openFaq === index && (
-                            <div className="faq-answer">
-                                {faq.answer}
-                            </div>
-                        )}
-                    </div>
-                ))}
-            </div>
+          <div className="faq-list">
+            {faqs.map((faq, index) => (
+              <div key={index} className="faq-item">
+                <button
+                  className="faq-question"
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                >
+                  <span>{faq.question}</span>
+                  {openFaq === index ? <FaMinus size={12}/> : <FaPlus size={12}/>}
+                </button>
+                {openFaq === index && (
+                  <div className="faq-answer">
+                    {faq.answer}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
+
       </main>
 
       {/* 2. Footer Component */}
       <Footer />
-      
+
     </div>
   );
 };
