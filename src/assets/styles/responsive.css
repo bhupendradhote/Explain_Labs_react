@@ -293,4 +293,7 @@
   .social-links {
     gap: 8px;
 }
+.footer-bg-text span {
+        font-size: 3.6rem !important;
+    }
 }
