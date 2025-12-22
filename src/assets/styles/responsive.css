@@ -77,9 +77,29 @@
   }
 
   .left-card {
-    display: none !important;
+    height: 140px !important;
+    min-height: 140px !important;
+    /* display: none; */
   }
 
+  .left-overlay {
+    left: 20px !important;
+    bottom: 20px !important;
+    right: 20px !important;
+  }
+
+  .brand-row {
+    margin-bottom: 16px !important;
+  }
+
+  .left-title {
+    font-size: 18px !important;
+  }
+
+  .right-card {
+    padding: 52px 14px 0 !important;
+    align-items: flex-start !important;
+  }
 
   .welcome {
     font-size: 22px !important;
