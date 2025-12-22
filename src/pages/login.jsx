@@ -109,7 +109,6 @@ const Login = () => {
             width: 100%;
             margin: 0 auto;
             border-radius: 16px;
-            overflow: hidden;
             background: transparent;
             height: 100vh;
             padding: 20px;
@@ -232,8 +231,8 @@ const Login = () => {
             margin: 0 0 32px;
             font-style: Regular;
             font-weight: 400;
-            color: #6b7280;
-            font-size: 20px;
+            color: #585858;
+            font-size: 18px;
             text-align: center;
             line-height: 1.5;
           }
@@ -368,145 +367,8 @@ const Login = () => {
           }
           */
 
-          /* Responsive Design */
-          @media (max-width: 1024px) {
-            .login-card {
-              max-width: 900px;
-              height: 600px;
-            }
-            
-            .left-overlay {
-              left: 32px;
-              bottom: 32px;
-              right: 32px;
-            }
-            
-            .left-title {
-              font-size: 40px;
-            }
-            
-            .right-card {
-              padding: 48px;
-            }
-            
-            .welcome {
-              font-size: 32px;
-            }
-          }
 
-          @media (max-width: 768px) {
-            .login-card {
-              flex-direction: column;
-              max-width: 500px;
-              border-radius: 16px;
-              height: auto;
-              min-height: 800px;
-            }
-            
-            .left-card {
-              border-radius: 16px 16px 0 0;
-              height: 350px;
-              min-height: 350px;
-            }
-            
-            .right-card {
-              border-radius: 0 0 16px 16px;
-              padding: 40px 32px;
-              flex: 1;
-            }
-            
-            .left-overlay {
-              left: 24px;
-              bottom: 24px;
-              right: 24px;
-            }
-            
-            .left-title {
-              font-size: 32px;
-            }
-            
-            .welcome {
-              font-size: 28px;
-            }
-            
-            .form-wrap {
-              max-width: 100%;
-            }
-          }
 
-          @media (max-width: 480px) {
-            .login-page {
-              padding: 16px;
-            }
-            
-            .login-container {
-              padding: 0;
-            }
-            
-            .login-card {
-              min-height: 700px;
-            }
-            
-            .left-card {
-              height: 280px;
-              min-height: 280px;
-                      display: none;
-            }
-            
-            .left-overlay {
-              left: 20px;
-              bottom: 20px;
-              right: 20px;
-            }
-            
-            .brand-row {
-              margin-bottom: 16px;
-            }
-            
-            .left-title {
-              font-size: 28px;
-            }
-            
-            .right-card {
-              padding: 52px 14px 0;
-              align-items: flex-start;
-            }
-            
-            .welcome {
-              font-size: 22px;
-
-            }
-            
-            .subtitle {
-              font-size: 12px;
-              margin-bottom: 38px;
-            }
-            
-            .input {
-              padding: 12px 14px;
-              margin-bottom: 20px;
-            }
-            
-            .login-btn {
-              padding: 14px 20px;
-            }
-          }
-
-          /* Animation */
-          @keyframes fadeIn {
-            from {
-              opacity: 0;
-              transform: translateY(10px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-
-          .form-wrap {
-            animation: fadeIn 0.6s ease-out;
-          }
         `}</style>
       </div>
     </>

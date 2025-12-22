@@ -3,6 +3,10 @@ import Login from "./pages/login";
 import PricingPage from "./pages/pricing";
 import HomePage from "./pages/Home";
 import "./assets/styles/global.css";
+import "./assets/styles/responsive.css";
+import "./assets/styles/animation.css";
+
+
 
 
 function App() {
