@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // Make sure the path to your image is correct
-import bg from "../assets/images/back2.jpg";
+import bg from "../assets/images/Mask_group.png";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -25,7 +25,6 @@ const Login = () => {
             <div className="left-card">
               {/* Background image container */}
               <div className="image-container">
-                <div className="image-overlay"></div>
                 <div className="left-overlay">
                   <div className="brand-row">
                     <div className="brand-logo">E</div>
@@ -102,20 +101,19 @@ const Login = () => {
 
           .login-container {
             width: 100%;
-            max-width: 1200px;
-            padding: 20px;
+            max-width: 98%;
           }
 
           .login-card {
             display: flex;
             width: 100%;
-            max-width: 1180px;
             margin: 0 auto;
             border-radius: 16px;
             overflow: hidden;
-            // box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.02);
             background: transparent;
-            height: 540px;
+            height: 100vh;
+            padding: 20px;
+
           }
 
           /* Left Card - Background Image Section */
@@ -125,6 +123,8 @@ const Login = () => {
             overflow: hidden;
             position: relative;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+
           }
 
           .image-container {
@@ -206,17 +206,17 @@ const Login = () => {
           .right-card {
             flex: 1;
             background: #ffffff;
-            padding: 64px;
+            padding: 10px;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-end;
             border-radius: 0 16px 16px 0;
             // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
           }
 
           .form-wrap {
             width: 100%;
-            max-width: 380px;
+            max-width: 85%;
           }
 
           .welcome {
@@ -230,7 +230,7 @@ const Login = () => {
           .subtitle {
             margin: 0 0 32px;
             color: #6b7280;
-            font-size: 14px;
+            font-size: 15px;
             line-height: 1.5;
           }
 
@@ -246,7 +246,7 @@ const Login = () => {
             width: 100%;
             padding: 14px 16px;
             border-radius: 10px;
-            border: 1.5px solid #DBDBDB;
+            border: 2px solid #DBDBDB;
             font-size: 15px;
             outline: none;
             transition: all 0.2s ease;
@@ -303,13 +303,13 @@ const Login = () => {
           .or-divider .line {
             flex: 1;
             height: 1px;
-            background: #e5e7eb;
+            background: #C7C7C7;
           }
 
           .or-text {
-            color: #9ca3af;
+            color: #C7C7C7;
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 100;
             text-align: center;
           }
 
@@ -317,7 +317,7 @@ const Login = () => {
             padding: 14px 20px;
             border-radius: 12px;
             background: #ffffff;
-            border: 1.5px solid #e5e7eb;
+            border: 1.5px solid #DBDBDB;
             font-size: 15px;
             color: #374151;
           }
