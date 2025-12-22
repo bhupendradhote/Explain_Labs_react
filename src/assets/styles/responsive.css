@@ -78,14 +78,15 @@
   }
 
   .left-card {
-    height: 140px !important;
-    min-height: 140px !important;
-    /* display: none; */
+            height: 140px !important;
+        min-height: 160px !important;
+        /* display: none; */
+        margin-bottom: 25px !important;
   }
 
   .left-overlay {
     left: 20px !important;
-    bottom: 20px !important;
+    bottom: 28px !important;
     right: 20px !important;
   }
 
