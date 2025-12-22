@@ -4,6 +4,7 @@ import PricingPage from "./pages/pricing";
 import HomePage from "./pages/Home";
 import "./assets/styles/global.css";
 
+
 function App() {
   return (
     <BrowserRouter>

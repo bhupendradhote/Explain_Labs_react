@@ -220,26 +220,31 @@ const Login = () => {
           }
 
           .welcome {
-            font-size: 34px;
+            font-size: 44px;
+            font-style: Semi Bold;
             margin: 0 0 6px;
-            font-weight: 700;
+            font-weight: 600;
             color: #1a1a1a;
             text-align: center;
           }
 
           .subtitle {
             margin: 0 0 32px;
+            font-style: Regular;
+            font-weight: 400;
             color: #6b7280;
-            font-size: 15px;
+            font-size: 20px;
+            text-align: center;
             line-height: 1.5;
           }
 
           .label {
             display: block;
-            font-size: 14px;
+            font-style: Medium;
+            font-size: 18px;
             margin-bottom: 8px;
             color: #374151;
-            font-weight: 600;
+            font-weight: 400;
           }
 
           .input {
@@ -247,11 +252,14 @@ const Login = () => {
             padding: 14px 16px;
             border-radius: 10px;
             border: 2px solid #DBDBDB;
-            font-size: 15px;
+            font-size: 16px;
+            font-weight: 400;
             outline: none;
             transition: all 0.2s ease;
             margin-bottom: 24px;
             background: #f9fafb;
+            font-style: Regular;
+
           }
 
           .input:focus {
@@ -297,7 +305,7 @@ const Login = () => {
             display: flex;
             align-items: center;
             gap: 16px;
-            margin: 32px 0;
+            margin: 38px 0;
           }
 
           .or-divider .line {
@@ -308,7 +316,7 @@ const Login = () => {
 
           .or-text {
             color: #C7C7C7;
-            font-size: 14px;
+            font-size: 18px;
             font-weight: 100;
             text-align: center;
           }
@@ -318,7 +326,7 @@ const Login = () => {
             border-radius: 12px;
             background: #ffffff;
             border: 1.5px solid #DBDBDB;
-            font-size: 15px;
+            font-size: 18px;
             color: #374151;
           }
 
