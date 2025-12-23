@@ -1,0 +1,203 @@
+/* Container Shell */
+.main-interface-shell {
+  border-radius: 20px;
+  color: #ffffff;
+  max-width: 80%;
+  margin: 20px auto;
+}
+
+/* Navigation System */
+.category-tab-row {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 25px;
+  overflow-x: auto;
+}
+
+.category-btn {
+  background: #fafafa;
+  border: 1px solid #D4D4D4;
+  padding: 12px 22px;
+  border-radius: 10px;
+  color: #6E6E6E;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+  border-color: #555;
+  color: #000;
+}
+
+.category-btn.is-active {
+  background: #262627;
+  color: #FFFFFF;
+  font-weight: 700;
+  border-color: #262627;
+}
+
+/* Layout Grid */
+.workspace-container {
+
+  background: linear-gradient(341.02deg, #5236AC -16.27%, #02C8FF 27.74%, #EDEDED 71.31%);
+  padding: 10px;
+  border-radius: 10px;
+
+}
+.workspace-grid {
+  display: flex;
+  gap: 24px;
+
+}
+
+/* Common Panel Styling */
+.action-surface {
+  background: #ffffff;
+  color: #1a1a1a;
+  border-radius: 10px;
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 480px;
+      align-items: center;
+}
+
+/* Left Side Specifics */
+.text-input-field {
+  flex: 1;
+  resize: none;
+  border: none;
+  outline: none;
+      background: transparent;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #585858;
+  font-family: inherit;
+  width: 100%;
+}
+
+.surface-controls {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  border-top: 1px solid #D4D4D4;
+  padding-top: 15px;
+}
+
+.language-dropdown {
+  padding: 10px 16px;
+  border-radius: 25px;
+  border: 1px solid #E5E5E5;
+  background: #fafafa;
+  cursor: pointer;
+  font-weight: 500;
+  color: #262627;
+}
+.download-btn{
+  margin-left: 10px;
+  background: transparent;
+  color: #000;
+  border: 1px solid #D4D4D4;
+  padding: 12px 14px;
+  font-size: 12px;
+  border-radius: 50%;
+
+}
+/* Right Side Specifics */
+.panel-title {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #353535;
+}
+
+.file-drop-area {
+  border: 2px dashed #AFAFAF;
+  border-radius: 16px;
+  flex: 1;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  background: #F5F5F5;
+}
+
+.file-drop-area:hover {
+  background: #f8f9ff;
+  border-color: #aaa;
+}
+
+.file-type-icon {
+  font-size: 40px;
+  display: block;
+}
+
+.upload-label {
+  margin: 12px 0 0;
+  font-weight: 500;
+  font-size: 13px;
+  color: #656464;
+}
+
+.upload-constraint {
+  color: #505050;
+  font-weight: 500;
+
+  font-size: 12px;
+}
+
+/* Buttons */
+.execute-btn {
+  background: #262627;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: transform 0.1s active;
+}
+
+.execute-btn:hover {
+  background: #333;
+}
+
+.execute-btn.full-width {
+  margin-top: 20px;
+}
+
+/* Footer Section */
+.shell-attribution {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 15px;
+  color: #FFFFFF;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* icon sizing */
+.tab-icon svg {
+  font-size: 18px;
+}
+
+/* optional subtle active state */
+.category-btn.is-active .tab-icon svg {
+  transform: scale(1.05);
+}
+
+.category-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

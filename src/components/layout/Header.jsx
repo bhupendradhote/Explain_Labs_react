@@ -1,13 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaChevronDown, FaBars, FaTimes } from 'react-icons/fa';
-// Adjusting path to point to your existing CSS file
-
 import '../../assets/styles/HeaderFooter.css';
 import logoImage from '../../assets/images/logo.jpg';
 
-
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if screen is mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const handleDropdownClick = (menu) => {
+    if (isMobile) {
+      // Toggle dropdown only on mobile
+      setActiveDropdown(activeDropdown === menu ? null : menu);
+    }
+  };
+
+  // Close mobile menu when clicking outside (optional)
+  const handleLinkClick = () => {
+    if (isMobile) {
+      setMobileMenuOpen(false);
+      setActiveDropdown(null);
+    }
+  };
 
   return (
     <>
@@ -21,68 +47,101 @@ const Header = () => {
       <nav className="navbar">
         <div className="nav-logo-group">
           <a href="/home">
-          <div className="logo">
-  <img src={logoImage} alt="Explain Labs" className="logo-img" />
-</div>
-
+            <div className="logo">
+              <img src={logoImage} alt="Explain Labs" className="logo-img" />
+            </div>
           </a>
         </div>
 
         <div className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
+          <div className="nav-item">
+            <a 
+              href="/home" 
+              onClick={(e) => {
+                if (isMobile) {
+                  e.preventDefault();
+                  handleDropdownClick('home');
+                }
+              }}
+            >
+              Home <FaChevronDown size={10} className={`dropdown-icon ${activeDropdown === 'home' ? 'rotate' : ''}`} />
+            </a>
+            <div className={`dropdown-menu ${activeDropdown === 'home' ? 'show' : ''}`}>
+              <a href="/overview" onClick={handleLinkClick}>Overview</a>
+              <a href="/features" onClick={handleLinkClick}>Features</a>
+            </div>
+          </div>
 
-  <div className="nav-item">
-    <a href="/home">Home <FaChevronDown size={10} /></a>
-    <div className="dropdown-menu">
-      <a href="/overview">Overview</a>
-      <a href="/features">Features</a>
-    </div>
-  </div>
+          <div className="nav-item">
+            <a 
+              href="#" 
+              onClick={(e) => {
+                e.preventDefault();
+                handleDropdownClick('creative');
+              }}
+            >
+              Creative Platform <FaChevronDown size={10} className={`dropdown-icon ${activeDropdown === 'creative' ? 'rotate' : ''}`} />
+            </a>
+            <div className={`dropdown-menu ${activeDropdown === 'creative' ? 'show' : ''}`}>
+              <a href="#" onClick={handleLinkClick}>AI Design</a>
+              <a href="#" onClick={handleLinkClick}>Content Studio</a>
+              <a href="#" onClick={handleLinkClick}>Templates</a>
+            </div>
+          </div>
 
-  <div className="nav-item">
-    <a href="#">Creative Platform <FaChevronDown size={10} /></a>
-    <div className="dropdown-menu">
-      <a href="#">AI Design</a>
-      <a href="#">Content Studio</a>
-      <a href="#">Templates</a>
-    </div>
-  </div>
+               <div className="nav-item">
+            <a 
+              href="#" 
+              onClick={(e) => {
+                e.preventDefault();
+                handleDropdownClick('creative');
+              }}
+            >
+              Developers <FaChevronDown size={10} className={`dropdown-icon ${activeDropdown === 'creative' ? 'rotate' : ''}`} />
+            </a>
+            <div className={`dropdown-menu ${activeDropdown === 'creative' ? 'show' : ''}`}>
+              <a href="#" onClick={handleLinkClick}>AI Design</a>
+              <a href="#" onClick={handleLinkClick}>Content Studio</a>
+              <a href="#" onClick={handleLinkClick}>Templates</a>
+            </div>
+          </div>
 
-  <div className="nav-item">
-    <a href="#">Agents Platform <FaChevronDown size={10} /></a>
-    <div className="dropdown-menu">
-      <a href="#">AI Agents</a>
-      <a href="#">Automation</a>
-    </div>
-  </div>
+          
+          <div className="nav-item">
+            <a 
+              href="#" 
+              onClick={(e) => {
+                e.preventDefault();
+                handleDropdownClick('agents');
+              }}
+            >
+              Agents Platform <FaChevronDown size={10} className={`dropdown-icon ${activeDropdown === 'agents' ? 'rotate' : ''}`} />
+            </a>
+            <div className={`dropdown-menu ${activeDropdown === 'agents' ? 'show' : ''}`}>
+              <a href="#" onClick={handleLinkClick}>AI Agents</a>
+              <a href="#" onClick={handleLinkClick}>Automation</a>
+            </div>
+          </div>
 
-  <div className="nav-item">
-    <a href="#">Developers <FaChevronDown size={10} /></a>
-    <div className="dropdown-menu">
-      <a href="#">API Docs</a>
-      <a href="#">SDKs</a>
-    </div>
-  </div>
-
-  <div className="nav-item">
-    <a href="#">Resources <FaChevronDown size={10} /></a>
-    <div className="dropdown-menu">
-      <a href="#">Blog</a>
-      <a href="#">Guides</a>
-      <a href="#">Support</a>
-    </div>
-  </div>
-
-  <a href="#">Enterprise</a>
-  <a href="/pricing">Pricing</a>
-</div>
-
-
-        <div className="nav-auth">
-          <button className="btn-login"><a href="/">Log in</a></button>
-          <button className="btn-signup"><a href="/">Sign up</a></button>
+          <a href="#" onClick={handleLinkClick}>Enterprise</a>
+          <a href="/pricing" onClick={handleLinkClick}>Pricing</a>
         </div>
 
-        <button className="mobile-menu-icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+        <div className="nav-auth">
+          <button className="btn-login"><a href="/" onClick={handleLinkClick}>Log in</a></button>
+          <button className="btn-signup"><a href="/" onClick={handleLinkClick}>Sign up</a></button>
+        </div>
+
+        <button
+          className="mobile-menu-icon"
+          onClick={() => {
+            setMobileMenuOpen(!mobileMenuOpen);
+            // Reset dropdowns when closing mobile menu
+            if (mobileMenuOpen) {
+              setActiveDropdown(null);
+            }
+          }}
+        >
           {mobileMenuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
         </button>
       </nav>

@@ -1,20 +1,25 @@
 import React from 'react';
 import { FaPlay, FaCheck, FaArrowRight } from 'react-icons/fa';
-// Import Layout Components
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
-// Import Page Specific Styles
+import GeneratorWorkspace from '../components/includes/GeneratorWorkspace';
 import '../assets/styles/HomePage.css';
-// --- IMPORT LOCAL IMAGES HERE ---
-// Ensure these files exist in your src/assets/images/ folder
-import heroInterface from '../assets/images/Frame60.png';
+// import heroInterface from '../assets/images/Frame60.png';
 import news1 from '../assets/images/1.png';                      
 import news2 from '../assets/images/2.png';                      
-import news3 from '../assets/images/3.png';                     
+import news3 from '../assets/images/3.png';   
+import clients from '../assets/images/clients.png'; 
+import Aiaudio from '../assets/images/aiaudio.png';
+import Aiaudioicon from '../assets/images/audioicon.png';
+import Voicechanger from '../assets/images/voicechanger.png';
+import saftyImage from '../assets/images/image.png';
+import saftyImage2 from '../assets/images/image2.png';
+
+
+
 const HomePage = () => {
 return (
 <div className="home-page-wrapper">
-{/* 1. Header Component Call */}
 <Header />
 <main>
 	{/* --- Hero Section --- */}
@@ -25,34 +30,27 @@ return (
 				<span className="gradient-text">AI PLATFORM</span>
 			</h1>
 			<p className="hero-subtitle">
-				Unleash the power of generative AI. Create, clone, and convert <br/>
-				with the most advanced audio ecosystem.
+				AI voice models and products powering millions of developers, creators, and enterprises. From  low‑latency conversational agents to the leading AI voice generator for voiceovers and audiobooks.
 			</p>
 			<div className="hero-buttons">
-				<button className="btn-primary-large">Get Started Free</button>
+				<button className="btn-primary-large">Sign Up</button>
 				<button className="btn-secondary-large">
-				<FaPlay size={12} style={{marginRight: '8px'}}/> 
-				See Demo
+				Contact Sales
 				</button>
 			</div>
 		</div>
 		<div className="hero-image-container">
-			{/* Using the imported variable here */}
-			<img src={heroInterface} alt="Dashboard Interface" className="hero-img" />
+			{/* <img src={heroInterface} alt="Dashboard Interface" className="hero-img" /> */}
+			<GeneratorWorkspace />
 		</div>
-		<div className="trusted-brands">
+		<div className="workspace-brands">
 			<h4 className='platform'>Experience the full Audio AI platform</h4>
 			<button className="btn-signup">Sign up</button>
 		</div>
 		<div className="trusted-brands">
 			<h2>Trusted by leading developers and enterprises</h2>
 			<div className="brand-logos">
-				{/* Replace with SVGs if you have them */}
-				<span>DUOLINGO</span>
-				<span>REVOLUT</span>
-				<span>WASHINGTON POST</span>
-				<span>NVIDIA</span>
-				<span>INTEL</span>
+				<img src={clients} alt="Trusted Brands" className="brands-img" />
 			</div>
 		</div>
 		<div className="dis_btns">
@@ -117,10 +115,9 @@ return (
 							/>
 					</div>
 					<div className="vg-footer">
-						<div className="vg-trusted">
-							<span className="vg-trusted-logo">TIME ↗</span>
-							<span className="vg-trusted-text">uses Studio for high-quality, long-form Text to Speech at sc...</span>
-						</div>
+							<div className="vg-trusted-logo">TIME ↗</div>
+							<div className="vg-trusted-text">uses Studio for high-quality, long-form Text to Speech at sc...</div>
+
 						<button className="vg-cta">GET STARTED FREE</button>
 					</div>
 				</div>
@@ -139,6 +136,7 @@ return (
 					</h2>
 				</div>
 			</div>
+			<div className="vg2-cards-cont">
 			<div className="vg2-cards-top">
 				<article className="vg2-card">
 					<h3 className="vg2-card-title">TEXT TO SPEECH API</h3>
@@ -146,9 +144,9 @@ return (
 						Independently rated the leading Text to Speech models. Choose Multilingual v2 for lifelike consistent speech; eleven_v3 for emotionally rich and expressive speech; or Flash v2.5 for the lowest latency. All support 29+ languages.
 					</p>
 					<ul className="vg2-bullets">
-						<li>▌ FLASH — 75ms latency for conversational usecases</li>
-						<li>▌ MULTILINGUAL — Best lifelike consistent speech</li>
-						<li>▌ V3 — Our most expressive model yet</li>
+						<li> <span>▌ FLASH — </span> 75ms latency for conversational usecases</li>
+						<li><span>▌ MULTILINGUAL —</span> Best lifelike consistent speech</li>
+						<li><span>▌ V3 — </span> Our most expressive model yet</li>
 					</ul>
 				</article>
 				<article className="vg2-card">
@@ -171,38 +169,49 @@ return (
 						<div><strong>$0.22</strong><span>/hour on the business plan</span></div>
 					</div>
 					<div className="vg2-mini-player">
-						<button aria-label="play" className="vg2-play">▶</button>
+						<div className='dis_fl'>
+							<button aria-label="play" className="vg2-play">▶</button>
 						<div className="vg2-toggle">
 							<button className="vg2-toggle-btn active">INPUT</button>
 							<button className="vg2-toggle-btn">OUTPUT</button>
 						</div>
-						<div className="vg2-blob" />
+						</div>
+						<div>
+							<img src={Voicechanger} alt="gradient player art" className="vg2-voicechanger" />
+						</div>
 						</div>
 				</article>
 				</div>
 				<div className="vg2-cards-bottom">
 					<div className="vg2-left-large">
-						<h3 className="vg2-card-title small">AGENTS</h3>
-						<p className="vg2-card-body small">
-							Build and deploy AI voice agents on web, mobile, or telephony in minutes with low latency and full configurability.
-						</p>
-						<ul className="vg2-feats">
-							<li>▌ Low latency</li>
-							<li>▌ Advanced turn taking</li>
-							<li>▌ Bring any LLM</li>
-							<li>▌ Function calling</li>
-							<li>▌ 31 languages</li>
-							<li>▌ Take phone calls</li>
-							<li>▌ 1000s of voices</li>
-						</ul>
-					</div>
-					<div className="vg2-art-right">
-						<div className="vg2-art-frame">
-							<img src="/mnt/data/Group 44.png" alt="gradient player art" className="vg2-art" />
+						<div>
+								<h3 className="vg2-card-title small">AGENTS</h3>
+							<p className="vg2-card-body small">
+								Build and deploy AI voice agents on web, mobile, or telephony in minutes with low latency and full configurability.
+							</p>
+							<ul className="vg2-feats">
+								<li>▌ Low latency</li>
+								<li>▌ Advanced turn taking</li>
+								<li>▌ Bring any LLM</li>
+								<li>▌ Function calling</li>
+								<li>▌ 31 languages</li>
+								<li>▌ Take phone calls</li>
+								<li>▌ 1000s of voices</li>
+							</ul>
+						</div>
+					<div className="vg2-art-frame">
+							<img src={Aiaudio} alt="gradient player art" className="vg2-art" />
+
 							<button className="vg2-art-center" aria-hidden>
 							<span className="vg2-wave" />
 							</button>
 						</div>
+					</div>
+
+					
+
+					<div className="vg2-art-right">
+						
 						<aside className="vg2-right-info">
 							<h4 className="vg2-card-title small">EASY TO USE APIS THAT SCALE</h4>
 							<p className="vg2-card-body small muted">
@@ -215,7 +224,10 @@ return (
 							<button className="vg2-contact">Contact Sales</button>
 						</aside>
 					</div>
+
+
 				</div>
+			</div>
 			</div>
 	</section>
 	{/* JSX: paste this into your React component file.
@@ -279,49 +291,61 @@ return (
 	</section>
 	{/* --- Split Cards Section --- */}
 	<section className="split-section">
-	<div className="split-card light">
-	<div>
-	<h3>AI safety at Explain Labs</h3>
-	<p>ElevenLabs is the leader in responsible use of AI audio
-	through Moderation, Accountability and Provenance.</p>
-	</div>
-	<button className="btn-pill-dark">Learn More</button>
-	</div>
-	<div className="split-card dark">
-	<div>
-	<h3>Breakthrough Research</h3>
-	<p>ElevenLabs was the first company to cross the threshold of
-	making human-like text to speech.</p>
-	</div>
-	<button className="btn-pill-light">About Us</button>
-	</div>
+		<div className="split-card light">
+			<div>
+				<h3>AI safety at Explain Labs</h3>
+				<p>ElevenLabs is the leader in responsible use of AI audio
+				through Moderation, Accountability and Provenance.</p>
+			</div>
+			<button className="btn-pill-dark">Learn More</button>
+			<div className='saftyImage'>
+		<img src={saftyImage} alt="" />
+
+			</div>
+
+		</div>
+		<div className="split-card dark">
+			<div>
+				<h3>Breakthrough Research</h3>
+				<p>ElevenLabs was the first company to cross the threshold of
+				making human-like text to speech.</p>
+			</div>
+			<button className="btn-pill-light">About Us</button>
+			<div className='saftyImage2'>
+		<img src={saftyImage2} alt="" />
+
+			</div>
+		</div>
 	</section>
 	{/* --- Latest News --- */}
 	<section className="news-section">
-	<h3>Latest Updates</h3>
+	<div className='news-head-dflx'>
+		<h3>Latest Updates</h3>
+		<button class="btn-pill-dark">All Updates</button>
+	</div>
 	<div className="news-grid">
 	<div className="news-card">
 	{/* Using the imported variable here */}
 	<img src={news1} alt="News 1" />
 	<div className="news-content">
-	<span className="news-tag">Product</span>
-	<h4>Introducing Image & Video Generation</h4>
+	<h4>Introducing ElevenLabs Image & Video</h4>
+	<p>Within ElevenLabs, you can now bring ideas to life in one complete creative workflow. Use leading models like Veo, Sora, Kling, Wan and Seedance to create high-quality visuals, then bring them to life with the best voices, music, and sound effects from ElevenLabs.</p>
 	</div>
 	</div>
 	<div className="news-card">
 	{/* Using the imported variable here */}
 	<img src={news2} alt="News 2" />
 	<div className="news-content">
-	<span className="news-tag">Research</span>
-	<h4>Breakthroughs in Latent Diffusion Models</h4>
+	<h4>ElevenLabs Welcomes McConaug…</h4>
+	<p>At ElevenLabs’ inaugural Summit, the company revealed that Academy Award-winning actor Matthew McConaughey has been a part of ElevenLabs story for years – as an investor, early supporter, and now, as a customer.</p>
 	</div>
 	</div>
 	<div className="news-card">
 	{/* Using the imported variable here */}
 	<img src={news3} alt="News 3" />
 	<div className="news-content">
-	<span className="news-tag">Company</span>
-	<h4>Series B Funding Announcement</h4>
+	<h4>Announcing Partnership with  Michael C…</h4>
+	<p>At today’s Summit, ElevenLabs announced a partnership with British cultural icon and award- winning actor Sir Michael Caine. Caine’s voice will be available on the ElevenReader app, and on the newly launched Iconic Marketplace.</p>
 	</div>
 	</div>
 	</div>

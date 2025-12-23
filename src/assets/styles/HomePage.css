@@ -3,21 +3,22 @@
    ========================================= */
 .hero-section {
   text-align: center;
-  padding: 80px 24px 40px;
+  /* padding: 50px 24px 40px; */
   overflow: hidden;
 }
 
 .hero-title {
-  font-size: 48px;
+  font-size: 52px;
   font-weight: 500;
-  line-height: 1.1;
+  line-height: 1.25;
   margin-bottom: 24px;
-  color: #111;
+  color: #262627;
 }
 
 .gradient-text {
     /* Using your new colors: Light Blue to Deep Purple */
-    background: linear-gradient(90deg, #02C8FF, #5236AC);
+    background: linear-gradient(90deg, #02C8FF 22.12%, #5236AC 58.65%);
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text; /* Standard property for better browser support */
@@ -25,11 +26,11 @@
 }
 
 .hero-subtitle {
-  font-size: 18px;
+  font-size: 17px;
   color: #666;
-  max-width: 600px;
+  max-width: 58%;
   margin: 0 auto 40px;
-  line-height: 1.6;
+  line-height: 26px;
 }
 
 .hero-buttons {
@@ -44,8 +45,8 @@
   color: white;
   padding: 14px 32px;
   border-radius: 99px;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 400;
   transition: transform 0.2s;
 }
 
@@ -56,12 +57,12 @@
 
 .btn-secondary-large {
   background-color: white;
-  color: #111;
-  border: 1px solid #ddd;
+  color: #262627;
+  border: 1px solid #D4D4D4;
   padding: 14px 32px;
   border-radius: 99px;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 400;
   display: flex;
   align-items: center;
   transition: background 0.2s;
@@ -86,11 +87,17 @@
   background-repeat: no-repeat;
   background-color: transparent;
 }
-.trusted-brands h2 {
-    font-size: 24px;
-    color: #000;
+.workspace-brands h2{
+   font-size: 26px;
+    color: #262627;
     font-weight: 700;
-     text-transform: capitalize;
+     text-transform: uppercase;
+}
+.trusted-brands h2 {
+    font-size: 26px;
+    color: #262627;
+    font-weight: 700;
+     text-transform: uppercase;
 }
 .dis_btns{
   display: flex;
@@ -99,6 +106,12 @@
 }
 .platform{
     margin-bottom: 30px;
+    font-size: 18px;
+    color: #585858;  
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    
 }
 .hero-img {
   width: 1100px;
@@ -110,7 +123,7 @@
 }
 
 .trusted-brands {
-  margin-top: 40px;
+  margin-top: 100px;
   padding-bottom: 20px;
   color: #888;
   font-size: 12px;
@@ -122,10 +135,10 @@
   display: flex;
   justify-content: center;
   gap: 40px;
-  margin-top: 20px;
-  opacity: 0.5;
   font-weight: 700;
+  width: 85%;
   font-size: 18px;
+  margin: 30px auto;
 }
 
 /* =========================================
@@ -302,11 +315,11 @@
    SPLIT SECTION
    ========================================= */
 .split-section {
-  max-width: 1180px;
+  max-width: 1250px;
   margin: 40px auto;
-  padding: 0 24px;
   display: flex;
   gap: 24px;
+  height: 500px;
 }
 
 .split-card {
@@ -317,40 +330,64 @@
   flex-direction: column;
      justify-content: space-between;
   min-height: 300px;
+  overflow: hidden;
 }
 
 .split-card.light {
   background-color: #F2F2F2;
   color: #111;
-}
+  position: relative;
+z-index: 3;
 
+}
+.saftyImage{
+  position: absolute;
+left: 0;
+bottom: -80px;
+z-index: 1;
+
+}
+.saftyImage2{
+    position: absolute;
+left: 0;
+bottom: -50px;
+z-index: 1;
+
+}
 .split-card.dark {
-  background-color: #111;
+  background-color: #1C1C1C;
   color: white;
+  position: relative;
+z-index: 3;
 }
 
 .split-card h3 {
-  font-size: 28px;
+  font-size: 36px;
   margin-bottom: 16px;
       font-weight: 500;
 }
 
 
 .split-card p {
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 24px;
   margin-bottom: 32px;
   max-width: 400px;
-      color: #838282;
+      color: #6E6E6E;
 }
 
 .btn-pill-dark {
   align-self: flex-start;
-  background-color: #111;
+  background-color: #5236AC;
   color: white;
   padding: 10px 24px;
   border-radius: 99px;
-  font-weight: 600;
+  position: relative;
+  font-weight: 400;
+  border: 1px solid #5236AC;
+      z-index: 3;
+      font-size: 16px;
+
 }
 
 .btn-pill-light {
@@ -359,25 +396,36 @@
   color: #111;
   padding: 10px 24px;
   border-radius: 99px;
-  font-weight: 600;
+  font-weight: 400;
+      z-index: 3;
+      font-size: 16px;
+
+
 }
 
 /* =========================================
    NEWS SECTION
    ========================================= */
 .news-section {
-  max-width: 1280px;
+  max-width: 1250px;
   margin: 0 auto;
-  padding: 80px 24px;
+  padding: 30px 0 60px;
 }
 
 .news-section h3 {
-  font-size: 24px;
-  margin-bottom: 40px;
+  font-size: 28px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  color: #262627;
+  font-weight: 700;
 }
+.news-head-dflx {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  margin: 30px 0;
 
+}
 .news-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -395,7 +443,7 @@
 
 .news-card img {
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 16px;
@@ -412,8 +460,16 @@
 
 .news-card h4 {
   font-size: 18px;
-  line-height: 1.4;
-  color: #111;
+  line-height: 26px;
+  color: #262627;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.news-card p {
+  font-size: 14px;
+  line-height: 21px;
+  color: #585858;
 }
 
 /* =========================================
@@ -441,13 +497,13 @@
 :root{
   --bg: #f6f6f778;
   --panel: #ffffff;
-  --muted: #6b6b6f;
-  --accent: #6b21ff; /* purple accent used subtly */
+  --muted: #ABAAAA;
+  --accent: #585858; /* purple accent used subtly */
   --card-shadow: 0 6px 18px rgba(10,10,10,0.06);
   --edge-shadow: 0 8px 22px rgba(0,0,0,0.08);
   --radius: 14px;
   --gap: 20px;
-  --container-max: 1200px;
+  --container-max: 1250px;
   --text-strong: #111;
 }
 
@@ -458,7 +514,7 @@
   color: var(--text-strong);
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 .vg-inner{
@@ -474,15 +530,16 @@
 
 .vg-subtle-link{
   display: inline-block;
-  font-size: 13px;
-  color: var(--accent);
+  font-size: 17px;
+  color: #585858;
   text-decoration: none;
   letter-spacing: 0.6px;
   margin-bottom: 8px;
+
 }
 
 .vg-subtle-strong{
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 6px;
 }
@@ -491,18 +548,21 @@
   margin: 30px auto;
   max-width: 980px;
   font-size: 26px;
-  line-height: 1.08;
-  font-weight: 800;
+  line-height: 1.28;
+  font-weight: 700;
   color: #222;
   letter-spacing: 0.4px;
 }
 
 /* layout */
 .vg-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 28px;
   align-items: start;
+  margin-top: 40px;
+  background: #F2F2F2;
+      padding: 10px;
+border-radius: 12px;
 }
 
 /* left column (cards) */
@@ -515,7 +575,7 @@
   padding: 0;
   margin: 0;
   display: grid;
-  gap: 9px;
+  gap: 6px;
 }
 
 .vg-card{
@@ -532,15 +592,16 @@
 
 .vg-card-title{
   margin: 0 0 8px;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 800;
   letter-spacing: 0.2px;
+  color: #000000;
 }
 
 .vg-card-desc{
   margin: 0;
   font-size: 14px;
-  color: var(--muted);
+  color: #585858;
   line-height: 1.45;
 }
 
@@ -550,6 +611,12 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  width: 77%;
+}
+
+.vg-trusted-text{
+  font-size: 12px;
+  color: #585858;
 }
 
 .vg-art-wrap{
@@ -590,25 +657,25 @@
 }
 
 .vg-trusted-logo{
-  display: inline-block;
-  font-weight: 700;
-  color: #d94b4b;
-  padding: 2px 8px;
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.03);
+    display: inline-block;
+    font-weight: 700;
+    color: #d94b4b;
+    padding: 4px 15px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.05);
 }
 
 /* CTA button */
 .vg-cta{
-  background: linear-gradient(90deg, #000 0%, #222 100%);
+  background: #000000;
   color: #fff;
   border: none;
   padding: 12px 18px;
   border-radius: 999px;
   font-weight: 700;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 12.4px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.18);
 }
 
@@ -655,78 +722,89 @@
 /* CSS -- apply to your project (e.g. VoiceDevSection.css)
    Classnames in JSX map to these selectors. */
 :root{
-  --bg-b:#0f0f0f;
+  --bg-b:#0F0E0E;
   --card:#141414;
-  --muted:#9a9a9a;
-  --border:rgba(255,255,255,0.04);
+  --muted: #ABAAAA;
+  --border:#363636;
   --accent:#66d9ff;
   --radius:12px;
   --pad:22px;
   --shadow:0 8px 18px rgba(0,0,0,0.6);
-  --container:1150px;
+  --container:1250px;
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
 .vg2-section{
   background: var(--bg-b);
   color: #eee;
-  padding: 48px 20px;
+  padding: 90px 20px;
   display:flex;
   justify-content:center;
+  
 }
 
 .vg2-inner{
   width:100%;
   max-width:var(--container);
+
 }
 
 /* heading */
 .vg2-top{ text-align:center; margin-bottom:20px; }
-.vg2-sub{ color:var(--accent); font-size:13px; text-decoration:none; display:inline-block; margin-bottom:10px; }
+.vg2-sub{ color:var(--accent); font-size:18px; text-decoration:none; display:inline-block; margin-bottom:18px; }
 .vg2-heading{
   margin:0 auto;
-  font-size:22px;
-  font-weight:800;
-  max-width:980px;
+  font-size:28px;
+  font-weight:700;
+  max-width:780px;
   letter-spacing:0.6px;
-  line-height:1.12;
+  line-height: 36px;
   color:#fff;
+  margin-bottom: 50px;
 }
-
+.vg2-cards-cont{
+      background: #fafafa0d;
+  padding: 10px;
+  border-radius: 10px;
+}
 /* top three cards */
 .vg2-cards-top{
   display:grid;
   grid-template-columns:repeat(3, 1fr);
-  gap:18px;
-  margin-top:18px;
+  gap:8px;
+
 }
 
 .vg2-card{
-  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.008));
+  background: #0F0E0E;
   border:1px solid var(--border);
   border-radius:10px;
-  padding:18px;
-  box-shadow:var(--shadow);
+  padding:28px;
   min-height:230px;
   display:flex;
   flex-direction:column;
-  justify-content:space-between;
+justify-content: flex-start;
 }
 
-.vg2-card-title{ font-size:15px; margin:0 0 10px; color:#fff; font-weight:700; }
-.vg2-card-body{ margin:0 0 12px; color:var(--muted); font-size:13px; line-height:1.45; }
+.vg2-card-title{ font-size: 20px; margin:0 0 20px; color:#fff; font-weight:400; line-height: 26px; }
+.vg2-card-body{ margin:0 0 12px; color:var(--muted); font-size:16px; line-height: 22px; font-weight:400; line-height: 23px;}
 
 /* bullets in left card */
 .vg2-bullets{ margin:8px 0 0; padding:0 0 0 0; list-style:none; color:var(--muted); font-size:13px; }
-.vg2-bullets li{ margin:8px 0; }
-
+.vg2-bullets li{ margin:8px 0;color: #ABAAAA; font-size: 15px;}
+.vg2-bullets li span {
+    display: block;
+    color: #fff;
+    margin-bottom: 8px;
+    font-size: 17px;
+}
 /* stats in middle/right card */
 .vg2-stats{ display:flex; gap:18px; margin-top:6px; color:#ddd; font-size:13px; }
 .vg2-stats div{ display:flex; flex-direction:column; }
 .vg2-stats strong{ font-size:16px; color:#fff; }
 
 /* mini player in right card */
-.vg2-mini-player{ display:flex; align-items:center; gap:12px; margin-top:14px; }
+.vg2-mini-player{ display:flex; align-items:center; gap:12px; margin-top:90px;    justify-content: space-between; }
 .vg2-play{
   background:#fff;
   color:#111;
@@ -736,9 +814,15 @@
   border:none;
   font-weight:700;
   cursor:pointer;
-  box-shadow:0 6px 14px rgba(0,0,0,0.5);
+  display: flex;
+      align-items: center;
+    justify-content: center;
 }
-.vg2-toggle{ display:flex; background:rgba(255,255,255,0.03); border-radius:999px; padding:4px; }
+.dis_fl{
+    display: flex;
+    gap: 15px;
+}
+.vg2-toggle{ display:flex; background:#0F0E0E; border-radius:999px; padding:4px; border: 1px solid #363636; }
 .vg2-toggle-btn{
   background:transparent;
   border:none;
@@ -746,30 +830,34 @@
   padding:6px 10px;
   border-radius:999px;
   cursor:pointer;
+   font-size: 11px;
   font-weight:700;
 }
 .vg2-toggle-btn.active{ background:#fff; color:#111; }
 
 /* bottom area */
 .vg2-cards-bottom{
-  display:grid;
-  grid-template-columns: 1fr 420px;
-  gap:18px;
-  margin-top:20px;
-  align-items:start;
+  display:flex;
+  gap:8px;
+  margin-top: 8px;
+align-items: flex-start;
+      justify-content: space-between;
 }
 
 /* left large */
 .vg2-left-large{
-  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.008));
+  background: #0F0E0E;
   border:1px solid var(--border);
   border-radius:10px;
   padding:24px;
-  box-shadow:var(--shadow);
   min-height:300px;
+  display: flex;
+  justify-content: space-between;
+gap: 30px;
 }
+
 .vg2-feats{ margin:12px 0 0; padding:0; list-style:none; color:#fff; font-weight:700; }
-.vg2-feats li{ margin:8px 0; color:#fff; font-size:13px; }
+.vg2-feats li{ margin:8px 0; color:#fff; font-size:15px; }
 
 /* right column with art + info */
 .vg2-art-right{ display:flex; flex-direction:column; gap:14px; align-items:stretch; }
@@ -779,7 +867,8 @@
   overflow:hidden;
   border:1px solid rgba(255,255,255,0.03);
   position:relative;
-  box-shadow:var(--shadow);
+    min-height:300px;
+      width: 62%;
 }
 .vg2-art{ display:block; width:100%; height:100%; object-fit:cover; }
 
@@ -798,19 +887,18 @@
   align-items:center;
   justify-content:center;
   cursor:pointer;
-  box-shadow:0 10px 30px rgba(0,0,0,0.6);
 }
 .vg2-wave{
   width:24px;
   height:24px;
   display:block;
   border-radius:2px;
-  background:linear-gradient(180deg,var(--accent),#7b5cff);
+  background:#0F0E0E;
 }
 
 /* right info card */
 .vg2-right-info{
-  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.008));
+  background: #0F0E0E;
   border:1px solid var(--border);
   border-radius:10px;
   padding:18px;
@@ -833,7 +921,6 @@
 }
 
 /* small helpers */
-.small{ font-size:13px; }
 .muted{ color:var(--muted); }
 
 /* responsiveness */
@@ -900,3 +987,6 @@
 .btn-signup a{
   color: white ;
 }
+
+
+
