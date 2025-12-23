@@ -10,7 +10,17 @@
 /* =========================================
    PRICING HEADER SECTION
    ========================================= */
-
+   .toggle-cont{
+	    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+    margin-bottom: 50px;
+    justify-content: center;
+   }
+.toggle-price{
+	color: #5236AC;
+}
 .pricing-header {
 	text-align: center;
 	margin-bottom: 80px;
