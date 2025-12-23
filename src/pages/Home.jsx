@@ -109,7 +109,7 @@ return (
 				<div className="vg-right">
 					<div className="vg-art-wrap">
 						<img
-							src="../src/assets/images/ai.jpg"
+							src="../assets/images/ai.jpg"
 							alt="AI neon art"
 							className="vg-art"
 							/>
@@ -273,7 +273,7 @@ return (
 	<div className="vg-right">
 	<div className="vg-art-wrap">
 	<img
-		src="../src/assets/images/ent_back.jpg"
+		src="../assets/images/ent_back.jpg"
 		alt="AI neon art"
 		className="vg-art"
 		/>
