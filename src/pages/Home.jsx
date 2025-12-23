@@ -14,6 +14,9 @@ import Aiaudioicon from '../assets/images/audioicon.png';
 import Voicechanger from '../assets/images/voicechanger.png';
 import saftyImage from '../assets/images/image.png';
 import saftyImage2 from '../assets/images/image2.png';
+import aiImage from '../assets/images/ai.jpg';
+import ent_back from '../assets/images/ent_back.jpg';
+
 
 
 
@@ -109,7 +112,7 @@ return (
 				<div className="vg-right">
 					<div className="vg-art-wrap">
 						<img
-							src="../assets/images/ai.jpg"
+							src={aiImage}
 							alt="AI neon art"
 							className="vg-art"
 							/>
@@ -273,7 +276,7 @@ return (
 	<div className="vg-right">
 	<div className="vg-art-wrap">
 	<img
-		src="../assets/images/ent_back.jpg"
+		src={ent_back.jpg}
 		alt="AI neon art"
 		className="vg-art"
 		/>
