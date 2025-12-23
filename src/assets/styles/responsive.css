@@ -1,5 +1,9 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
+
+	.vg-inner,.vg2-inner, .split-section, .news-section, .footer-container{
+		max-width: 90% !important;
+	}
 	.login-card {}
 
 	.left-overlay {
@@ -45,6 +49,9 @@
 }
 
 @media (max-width: 768px) {
+	.vg-inner,.vg2-inner, .split-section, .news-section, .footer-container, .main-interface-shell{
+		max-width: 95% !important;
+	}
 	.login-card {
 		flex-direction: column;
 		border-radius: 16px;
@@ -93,6 +100,67 @@
      .footer-bg-text span {
     font-size: 6.3rem !important; /* Smaller text for mobile */
   }
+  .hero-subtitle {
+    max-width: 85% !important;
+}
+
+.vg-section{
+	padding: 0 !important;
+}
+
+  .vg-grid{
+        flex-direction: column !important;
+  }
+h2{
+	font-size: 22px !important;
+}
+.trusted-brands{
+	margin-top: 40px !important;
+}
+.text-input-field {
+
+    font-size: 14px !important;
+    line-height: 1.2 !important;
+
+}
+.action-surface {
+    padding: 24px 10px !important;
+    min-height: 440px !important;
+}
+  .vg-right{
+    width: 100% !important;
+  }
+  .category-btn.is-active {
+ 
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    padding: 12px !important;
+}
+    .vg2-cards-bottom {
+flex-direction: column;
+    }
+    .vg2-art-right {
+        width: 100% !important;
+    }
+	.vg2-art-frame {
+
+    min-height: auto !important;
+    width: 100% !important;
+}
+.vg2-card-body {
+
+    font-size: 13px !important;
+
+    line-height: 20px !important;
+}
+.split-card {
+padding: 20px !important;
+    min-height: auto !important;
+}
+.split-card h3 {
+    font-size: 28px !important;
+
+}
 }
 @media (max-width: 600px) {
 	.pricing-grid {
@@ -102,6 +170,9 @@
 		width: 100% !important;
 
 	}
+	    .footer-bg-text span {
+        font-size: 5rem !important;
+    }
 .navbar
  {
     padding: 16px !important;
@@ -113,12 +184,24 @@
      width: 150px !important;
 }
 
+.vg2-left-large {
 
+    flex-direction: column !important;
+}
 
         .card-header-absolute {
         width: 98% !important;
     }
 
+	.vg2-section {
+   
+    padding: 0 !important;
+
+}
+.workspace-grid {
+    gap: 14px !important;
+    flex-direction: column !important;
+}
 }
 @media (max-width: 480px) {
 	.login-page {

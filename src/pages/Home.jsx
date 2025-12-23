@@ -276,7 +276,7 @@ return (
 	<div className="vg-right">
 	<div className="vg-art-wrap">
 	<img
-		src={ent_back.jpg}
+		src={ent_back}
 		alt="AI neon art"
 		className="vg-art"
 		/>

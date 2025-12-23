@@ -49,11 +49,14 @@ const Footer = () => {
             <a href="#">YouTube</a>
           </div>
         </div>
-      </div>
-
-      <div className="footer-bg-text">
+</div>
+<div>
+        <div className="footer-bg-text">
         <span>EXPLAIN LABS</span>
       </div>
+      </div>
+
+      
     </footer>
   );
 };
