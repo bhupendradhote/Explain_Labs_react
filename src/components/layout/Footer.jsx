@@ -1,5 +1,7 @@
 import React from 'react';
   import logoImage from '../../assets/images/logo-footer.png';
+  import footerImage from '../../assets/images/EXPLANLABS.png';
+
 const Footer = () => {
   const footerLinks = {
     Research: ['Text to Speech (TTS)', 'Speech to Text', 'Realtime Speech to Text', 'Voice Changer', 'Text to Sound Effects', 'Voice Cloning', 'Voice Isolator', 'AI Music Generator'],
@@ -50,10 +52,11 @@ const Footer = () => {
           </div>
         </div>
 </div>
-<div>
-        <div className="footer-bg-text">
-        <span>EXPLAIN LABS</span>
-      </div>
+
+
+      <div>
+             <img src={footerImage} alt="Explain Labs" className="logo-img" />
+
       </div>
 
       

@@ -226,7 +226,6 @@ body {
 .footer {
   background-color: #1B1B1B;
   color: white;
-  padding: 64px 24px 32px;
   position: relative;
   margin-top: auto;
 }
@@ -235,6 +234,8 @@ body {
   max-width: 1180px;
   margin: 0 auto;
   position: relative;
+  padding: 64px 24px 0;
+
   z-index: 10;
   margin-bottom: 1em;
 }
@@ -403,14 +404,16 @@ body {
     top: 60px;
     left: 0;
     right: 0;
+    gap: 0;
     background: white;
     padding: 24px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     width: 100%;
-    height: auto;
+    height: 100vh;
     max-height: calc(100vh - 60px);
     overflow-y: auto;
+            align-items: flex-start;
   }
 
   .nav-item {
@@ -422,6 +425,7 @@ body {
     font-size: 16px;
     justify-content: space-between;
     border-bottom: 1px solid #f0f0f0;
+    width: 100%;
   }
 
   .nav-links.mobile-open .nav-item:last-child a {
@@ -430,23 +434,31 @@ body {
 
   /* Mobile dropdown menu styles */
   .dropdown-menu {
-    position: static;
+    position: absolute;
     box-shadow: none;
     transform: none;
-    background: transparent;
-    padding-left: 16px;
+    background: #fff;
+    padding-left: 6px;
     border-left: 2px solid #f0f0f0;
-    margin: 8px 0;
+    /* margin: 8px 0; */
     max-height: 0;
     transition: max-height 0.3s ease;
+    width: calc(100% - 15px);
+    border: 1px solid #e5e7eb;
   }
 
   .dropdown-menu.show {
     max-height: 500px;
+
+  }
+
+    .dropdown-menu.show a{
+    padding: 6px 0;
+
   }
 
   .dropdown-menu a {
-    padding: 8px 0;
+    padding: 4px 0;
     color: #666;
     border-bottom: none;
   }

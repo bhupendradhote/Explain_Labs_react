@@ -94,12 +94,12 @@ const Header = () => {
               href="#" 
               onClick={(e) => {
                 e.preventDefault();
-                handleDropdownClick('creative');
+                handleDropdownClick('developers');
               }}
             >
-              Developers <FaChevronDown size={10} className={`dropdown-icon ${activeDropdown === 'creative' ? 'rotate' : ''}`} />
+              Developers <FaChevronDown size={10} className={`dropdown-icon ${activeDropdown === 'developers' ? 'rotate' : ''}`} />
             </a>
-            <div className={`dropdown-menu ${activeDropdown === 'creative' ? 'show' : ''}`}>
+            <div className={`dropdown-menu ${activeDropdown === 'developers' ? 'show' : ''}`}>
               <a href="#" onClick={handleLinkClick}>AI Design</a>
               <a href="#" onClick={handleLinkClick}>Content Studio</a>
               <a href="#" onClick={handleLinkClick}>Templates</a>

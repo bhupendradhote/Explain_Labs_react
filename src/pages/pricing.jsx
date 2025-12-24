@@ -140,32 +140,29 @@ const PricingPage = () => {
   return (
     <div className="pricing-page-container">
 
-      {/* 1. Header Component */}
       <Header />
 
-      {/* Main Content */}
       <div className="pricing-header">
         <h1>Pricing</h1>
         <p className="subtitle">Plans built for creators and business of all sizes</p>
         <div className="breadcrumbs">Home &gt; Pricing</div>
-
-        
       </div>
 
       <main className="main-content">
-{/* Billing toggle - minimal markup so existing CSS/UI doesn't change */}
         <div className='toggle-cont'>
-          <div style={{ display: 'inline-flex', borderRadius: 999, padding: 4, background: 'rgba(0,0,0,0.04)' }}>
+          <div style={{ display: 'inline-flex', borderRadius: 999, padding: 4, gap: 10 }}>
             <button className='toggle-price'
               onClick={() => setBillingPeriod('monthly')}
               aria-pressed={billingPeriod === 'monthly'}
               style={{
-                padding: '6px 10px',
-                borderRadius: 6,
+                padding: '6px 14px',
+                borderRadius: 50,
                 border: 'none',
-                background: billingPeriod === 'monthly' ? 'transparent' : 'transparent',
-                fontWeight: billingPeriod === 'monthly' ? 700 : 500,
-                cursor: 'pointer'
+                background: billingPeriod === 'monthly' ? '#000' : '#99999933',
+                fontWeight: billingPeriod === 'monthly' ? 700 : 400,
+                color: billingPeriod === 'monthly' ? '#fff' : '#262627',
+                cursor: 'pointer',
+                fontSize: '14px'
               }}
             >
               Monthly Billed
@@ -174,19 +171,20 @@ const PricingPage = () => {
               onClick={() => setBillingPeriod('yearly')}
               aria-pressed={billingPeriod === 'yearly'}
               style={{
-                padding: '6px 10px',
-                borderRadius: 6,
+                padding: '6px 14px',
+                borderRadius: 50,
                 border: 'none',
-                background: billingPeriod === 'yearly' ? 'transparent' : 'transparent',
+                background: billingPeriod === 'yearly' ? '#000' : '#99999933',
                 fontWeight: billingPeriod === 'yearly' ? 700 : 500,
-                cursor: 'pointer'
+                color: billingPeriod === 'monthly' ? '#262627' : '#fff',
+                cursor: 'pointer',
+                fontSize: '14px'
               }}
             >
               Yearly Billed
             </button>
           </div>
         </div>
-        {/* Pricing Cards Grid (rendered from data) */}
         <div className="pricing-grid">
           {currentPlans.map((plan) => (
             <div key={plan.id} className={`pricing-card ${plan.highlight ? 'highlight' : ''}`}>
@@ -214,7 +212,6 @@ const PricingPage = () => {
                     </li>
                   ))}
 
-                  {/* keep dummy text where it exists for Creator monthly as before */}
                   {plan.title === 'Creator' && billingPeriod === 'monthly' && (
                     <p className="dummy-text">
                       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
@@ -229,8 +226,6 @@ const PricingPage = () => {
             </div>
           ))}
 
-          {/* Keep the Most Popular label in the same place so UI/CSS doesn't need changing.
-              We'll render it once if the currently visible plans contain a highlighted plan. */}
           {currentPlans.some(p => p.highlight) && (
             <div className="card-header-absolute">Most Popular</div>
           )}
@@ -270,7 +265,6 @@ const PricingPage = () => {
 
       </main>
 
-      {/* 2. Footer Component */}
       <Footer />
 
     </div>

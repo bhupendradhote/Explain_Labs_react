@@ -355,8 +355,8 @@ padding: 20px !important;
 .faq-label p {
     font-size: 34px;
 }
-.footer {
-        padding: 35px 15px;
+.footer-container {
+        padding: 35px 15px 0 !important;
     }
 .footer-top {
             margin-bottom: 32px;
