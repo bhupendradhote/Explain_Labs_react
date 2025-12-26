@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import '../assets/styles/PricingPage.css';
 import { FaCheck, FaPlus, FaMinus } from 'react-icons/fa';
+// 1. Import Framer Motion modules
+import { motion, AnimatePresence } from 'framer-motion';
 
 // Import layout components
 import Header from '../components/layout/Header';
@@ -12,6 +14,40 @@ import pricingImage from '../assets/images/pricing.jpg';
 const PricingPage = () => {
   const [openFaq, setOpenFaq] = useState(1);
   const [billingPeriod, setBillingPeriod] = useState('monthly'); // 'monthly' | 'yearly'
+
+  // === Animation Variants ===
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15 }
+    }
+  };
+
+  // FAQ Accordion Variants
+  const accordionVariants = {
+    collapsed: { 
+      opacity: 0, 
+      height: 0, 
+      paddingTop: 0,
+      paddingBottom: 0,
+      overflow: 'hidden',
+      transition: { duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] } // Smooth easing
+    },
+    open: { 
+      opacity: 1, 
+      height: 'auto',
+      // Assuming your CSS has padding for .faq-answer, we let it naturally exist here.
+      // If animation is jerky, we might need to explicitly animate padding here based on your CSS values.
+      // For now, assuming 'auto' handles it decently with overflow hidden.
+      transition: { duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }
+    }
+  };
 
   const faqs = [
     {
@@ -32,7 +68,7 @@ const PricingPage = () => {
     }
   ];
 
-  // === Plans data: 3 monthly + 3 yearly (separate objects) ===
+  // === Plans data ===
   const monthlyPlans = [
     {
       id: 'free-monthly',
@@ -142,52 +178,91 @@ const PricingPage = () => {
 
       <Header />
 
-      <div className="pricing-header">
-        <h1>Pricing</h1>
-        <p className="subtitle">Plans built for creators and business of all sizes</p>
-        <div className="breadcrumbs">Home &gt; Pricing</div>
-      </div>
+      {/* 2. Animated Header elements */}
+      <motion.div 
+        className="pricing-header"
+        initial="hidden"
+        animate="visible"
+        variants={staggerContainer}
+      >
+        <motion.h1 variants={fadeInUp}>Pricing</motion.h1>
+        <motion.p className="subtitle" variants={fadeInUp}>Plans built for creators and business of all sizes</motion.p>
+        <motion.div className="breadcrumbs" variants={fadeInUp}>Home &gt; Pricing</motion.div>
+      </motion.div>
 
       <main className="main-content">
-        <div className='toggle-cont'>
+        {/* 3. Animated Toggle Container fade in */}
+        <motion.div 
+          className='toggle-cont'
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+        >
           <div style={{ display: 'inline-flex', borderRadius: 999, padding: 4, gap: 10 }}>
-            <button className='toggle-price'
+            {/* 4. Converted to motion.button for smooth background transition and tap effect */}
+            <motion.button className='toggle-price'
               onClick={() => setBillingPeriod('monthly')}
               aria-pressed={billingPeriod === 'monthly'}
+              whileTap={{ scale: 0.97 }}
+              animate={{ 
+                background: billingPeriod === 'monthly' ? '#000' : '#99999933',
+                color: billingPeriod === 'monthly' ? '#fff' : '#262627',
+              }}
+              transition={{ duration: 0.3 }}
               style={{
                 padding: '6px 14px',
                 borderRadius: 50,
                 border: 'none',
-                background: billingPeriod === 'monthly' ? '#000' : '#99999933',
+                // background handled by animate prop now
                 fontWeight: billingPeriod === 'monthly' ? 700 : 400,
-                color: billingPeriod === 'monthly' ? '#fff' : '#262627',
+                // color handled by animate prop now
                 cursor: 'pointer',
                 fontSize: '14px'
               }}
             >
               Monthly Billed
-            </button>
-            <button className='toggle-price'
+            </motion.button>
+            <motion.button className='toggle-price'
               onClick={() => setBillingPeriod('yearly')}
               aria-pressed={billingPeriod === 'yearly'}
+              whileTap={{ scale: 0.97 }}
+              animate={{ 
+                background: billingPeriod === 'yearly' ? '#000' : '#99999933',
+                color: billingPeriod === 'monthly' ? '#262627' : '#fff',
+              }}
+              transition={{ duration: 0.3 }}
               style={{
                 padding: '6px 14px',
                 borderRadius: 50,
                 border: 'none',
-                background: billingPeriod === 'yearly' ? '#000' : '#99999933',
+                // background handled by animate prop now
                 fontWeight: billingPeriod === 'yearly' ? 700 : 500,
-                color: billingPeriod === 'monthly' ? '#262627' : '#fff',
+                 // color handled by animate prop now
                 cursor: 'pointer',
                 fontSize: '14px'
               }}
             >
               Yearly Billed
-            </button>
+            </motion.button>
           </div>
-        </div>
-        <div className="pricing-grid">
+        </motion.div>
+
+        {/* 5. Pricing Grid Staggered entry. Key added to re-trigger animation on toggle */}
+        <motion.div 
+          className="pricing-grid"
+          key={billingPeriod}
+          variants={staggerContainer}
+          initial="hidden"
+          animate="visible"
+        >
           {currentPlans.map((plan) => (
-            <div key={plan.id} className={`pricing-card ${plan.highlight ? 'highlight' : ''}`}>
+            // 6. Animated Card entry and Hover effect
+            <motion.div 
+              key={plan.id} 
+              className={`pricing-card ${plan.highlight ? 'highlight' : ''}`}
+              variants={fadeInUp}
+              whileHover={{ y: -10, transition: { duration: 0.3 } }}
+            >
               {plan.promoBadge && <span className="promo-badge">{plan.promoBadge}</span>}
 
               <div className="card-content">
@@ -219,29 +294,41 @@ const PricingPage = () => {
                   )}
                 </ul>
 
-                <button className="card-cta">
+                {/* 7. Animated CTA Button */}
+                <motion.button 
+                  className="card-cta"
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                >
                   Get Started <span className="arrow">›</span>
-                </button>
+                </motion.button>
               </div>
-            </div>
+            </motion.div>
           ))}
 
           {currentPlans.some(p => p.highlight) && (
             <div className="card-header-absolute">Most Popular</div>
           )}
 
-        </div>
+        </motion.div>
 
         {/* FAQ Section */}
         <div className="faq-section">
-          <div className="faq-image">
+          {/* 8. FAQ Image Slide-in */}
+          <motion.div 
+            className="faq-image"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
             <img src={pricingImage} alt="Abstract Visualization" />
             <div className="faq-label">
               <p className='faq-one'>F</p>
               <p className='faq-two'>A</p>
               <p className='faq-three'>Q</p>
             </div>
-          </div>
+          </motion.div>
 
           <div className="faq-list">
             {faqs.map((faq, index) => (
@@ -251,13 +338,30 @@ const PricingPage = () => {
                   onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
                 >
                   <span>{faq.question}</span>
-                  {openFaq === index ? <FaMinus size={12}/> : <FaPlus size={12}/>}
+                  {/* 9. Animated Icon rotation */}
+                  <motion.span animate={{ rotate: openFaq === index ? 180 : 0 }}>
+                     {openFaq === index ? <FaMinus size={12}/> : <FaPlus size={12}/>}
+                  </motion.span>
                 </button>
-                {openFaq === index && (
-                  <div className="faq-answer">
-                    {faq.answer}
-                  </div>
-                )}
+                
+                {/* 10. Smooth Accordion Animation using AnimatePresence */}
+                <AnimatePresence initial={false}>
+                  {openFaq === index && (
+                    <motion.div 
+                      className="faq-answer"
+                      key="content"
+                      initial="collapsed"
+                      animate="open"
+                      exit="collapsed"
+                      variants={accordionVariants}
+                    >
+                      {/* Wrap inner text to ensure smooth height calculation */}
+                      <div> 
+                        {faq.answer}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             ))}
           </div>

@@ -391,4 +391,11 @@ padding: 20px !important;
     width: 90%;
 	margin-top: 10px;
 }
+    h2 {
+        font-size: 18px !important;
+    }
+	.vg-subtle-link {
+    font-size: 14px !important;
+    margin-top: 10px !important;
+}
 }
