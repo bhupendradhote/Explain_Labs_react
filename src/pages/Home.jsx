@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { motion, useScroll, useTransform, useSpring, useInView } from 'framer-motion';
+import {  useScroll, useTransform, useSpring } from 'framer-motion';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
 import GeneratorWorkspace from '../components/includes/GeneratorWorkspace';

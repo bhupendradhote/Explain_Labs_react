@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../assets/styles/PricingPage.css';
 import { FaCheck, FaPlus, FaMinus } from 'react-icons/fa';
 // 1. Import Framer Motion modules
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 // Import layout components
 import Header from '../components/layout/Header';
