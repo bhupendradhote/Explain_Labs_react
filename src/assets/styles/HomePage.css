@@ -941,9 +941,11 @@ gap: 30px;
   .vg2-contact{ width:100%; }
   .vg2-play{ width:34px; height:34px; }
 
-
+.vg-left {
+    width: 100%;
+}
   .hero-section {
-    padding: 20px 24px;
+    padding: 2px 2px !important;
 }
 .hero-buttons {
 
@@ -973,11 +975,23 @@ gap: 30px;
 }
 .split-section {
     margin: 20px auto;
-    padding: 0 10px;
+    padding: 0 0;
     gap: 10px;
+}
+    .split-card h3, .news-section h3 {
+        font-size: 18px !important;
+    }
+    .split-card p {
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 28px;
 }
 .news-section {
     padding: 20px 10px;
+}
+.btn-pill-dark , .btn-pill-light{
+    padding: 8px 17px;
+    font-size: 12px;
 }
 }
 
