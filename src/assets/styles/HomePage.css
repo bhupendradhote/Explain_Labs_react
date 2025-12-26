@@ -78,7 +78,7 @@
   max-width: 100%;
   margin: 0 auto ;
   border-radius: 12px;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative; 
   padding: 30px 0 0;
   background-image: url('../images/back.png'); 
@@ -568,6 +568,7 @@ border-radius: 12px;
 /* left column (cards) */
 .vg-left{
   display: block;
+  width: 50%;
 }
 
 .vg-list{
@@ -611,7 +612,7 @@ border-radius: 12px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  width: 77%;
+  width: 50%;
 }
 
 .vg-trusted-text{
@@ -985,4 +986,94 @@ gap: 30px;
 }
 
 
+/* ----------------------------------------- */
+/* --- Language Dropdown Styling --- */
 
+.language-select-wrapper {
+  position: relative; 
+  width: 29%;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.custom-dropdown-trigger {
+  border: 1px solid #D4D4D4;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #262627;
+  transition: all 0.2s ease;
+}
+
+.custom-dropdown-trigger:hover {
+  border-color: #666;
+}
+
+.selected-lang-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lang-flag
+ {
+    width: 18px;
+    height: 18px;
+    object-fit: cover;
+    border-radius: 50px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+.dropdown-arrow {
+  font-size: 0.7rem;
+  color: #888;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.rotated {
+  transform: rotate(180deg);
+}
+
+.custom-dropdown-options {
+  position: absolute;
+  top: 110%; 
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #D4D4D4;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 100;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none; 
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.custom-dropdown-options.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown-option {
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: #1C1C1C;
+  transition: background 0.2s;
+}
+
+.dropdown-option:hover {
+  color: #262627;
+}
+
+.dropdown-option.selected {
+  background-color: #F5F5F5;
+  color: #0F0E0E; 
+}
