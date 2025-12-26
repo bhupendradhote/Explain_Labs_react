@@ -49,9 +49,7 @@
 }
 
 @media (max-width: 768px) {
-	.vg-inner,.vg2-inner, .split-section, .news-section, .footer-container, .main-interface-shell{
-		max-width: 95% !important;
-	}
+
 	.login-card {
 		flex-direction: column;
 		border-radius: 16px;
@@ -379,4 +377,18 @@ padding: 20px !important;
 .footer-bg-text span {
         font-size: 3.2rem !important;
     }
+}
+
+@media (max-width:420px){
+      .vg-inner, .vg2-inner, .split-section, .news-section, .footer-container, .main-interface-shell {
+        max-width: 100% !important;
+    }
+	.surface-controls {
+
+    flex-direction: column-reverse;
+}
+.language-select-wrapper {
+    width: 90%;
+	margin-top: 10px;
+}
 }

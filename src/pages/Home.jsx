@@ -32,7 +32,7 @@ const HomePage = () => {
   const heroTextOpacity = useSpring(heroTextOpacityRaw, springConfig);
 
   // Hero Interface: Moves up faster, tilts slightly for 3D effect
-  const heroImageYRaw = useTransform(scrollY, [0, 1000], [0, -250]);
+  const heroImageYRaw = useTransform(scrollY, [0, 1000], [0, -50]);
   const heroImageRotateRaw = useTransform(scrollY, [0, 1000], [0, 5]); // Slight 3D tilt
   const heroImageY = useSpring(heroImageYRaw, springConfig);
   const heroImageRotate = useSpring(heroImageRotateRaw, springConfig);

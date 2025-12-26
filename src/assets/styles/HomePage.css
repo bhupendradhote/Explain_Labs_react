@@ -476,6 +476,7 @@ z-index: 3;
    RESPONSIVE
    ========================================= */
 @media (max-width: 768px) {
+  
   .hero-title { font-size: 32px; }
   .feature-container { flex-direction: column; text-align: center; }
   .feature-block.reverse .feature-container { flex-direction: column; }
@@ -937,6 +938,10 @@ gap: 30px;
 }
 
 @media (max-width:420px){
+      .vg-inner, .vg2-inner, .split-section, .news-section, .footer-container, .main-interface-shell {
+        max-width: 100% !important;
+    }
+
   .vg2-art{ height:220px; }
   .vg2-contact{ width:100%; }
   .vg2-play{ width:34px; height:34px; }
@@ -962,6 +967,7 @@ gap: 30px;
     gap: 5px;
     font-weight: 500;
     font-size: 13px;
+    width: 100%;
 }
 .hero-img {
     width: 100%;
@@ -993,6 +999,7 @@ gap: 30px;
     padding: 8px 17px;
     font-size: 12px;
 }
+
 }
 
 .btn-signup a{
