@@ -838,8 +838,6 @@ justify-content: flex-start;
   display:flex;
   gap:8px;
   margin-top: 8px;
-align-items: flex-start;
-      justify-content: space-between;
 }
 
 /* left large */
@@ -903,6 +901,8 @@ gap: 30px;
   display:flex;
   flex-direction:column;
   gap:12px;
+      height: -webkit-fill-available;
+          justify-content: space-between;
 }
 .vg2-right-list{ list-style:none; padding:0; margin:0; color:#fff; font-weight:700; }
 .vg2-right-list li{ margin:8px 0; font-size:13px; }

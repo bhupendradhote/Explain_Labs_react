@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../assets/styles/PricingPage.css';
 import { FaCheck, FaPlus, FaMinus } from 'react-icons/fa';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 
 // 1. Import Framer Motion modules

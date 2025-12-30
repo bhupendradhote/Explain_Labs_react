@@ -23,12 +23,12 @@ const Footer = () => {
           </div>
 
           <div className="footer-cta">
-            <h3>Reach Everyone With<br />Explain Labs</h3>
+            <h3>Reach Everyone With Explain Labs</h3>
             <button className="footer-signup-btn">Sign up</button>
           </div>
         </div>
 
-        <div className="footer-links-grid">
+        {/* <div className="footer-links-grid">
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category} className="footer-column">
               <h4>{category}</h4>
@@ -41,7 +41,7 @@ const Footer = () => {
               </ul>
             </div>
           ))}
-        </div>
+        </div> */}
 
         <div className="footer-bottom">
           <div>© 2025 Explain Labs</div>

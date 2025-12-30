@@ -38,10 +38,10 @@ const Header = () => {
   return (
     <>
       {/* Top Banner */}
-      <div className="top-banner">
+      {/* <div className="top-banner">
         <span className="banner-text"><span>Black Friday -</span> Starter Plan for $1</span>
         <button className="banner-btn">Redeem</button>
-      </div>
+      </div> */}
 
       {/* Navbar */}
       <nav className="navbar">

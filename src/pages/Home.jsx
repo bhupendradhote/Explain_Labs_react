@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+// eslint-disable-next-line no-unused-vars
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
@@ -136,21 +137,21 @@ const HomePage = () => {
           </motion.div>
 
           {/* Parallax Wrapper for Image (3D Tilt Effect) */}
-          <motion.div 
+          {/* <motion.div 
             style={{ y: heroImageY, rotateX: heroImageRotate, willChange: "transform" }} 
             className="hero-image-parallax-layer"
-          >
+          > */}
             <motion.div 
               className="hero-image-container"
               initial={{ opacity: 0, scale: 0.9, rotateX: 10 }}
               animate={{ opacity: 1, scale: 1, rotateX: 0 }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
+              // transition={{ duration: 1.2, ease: "easeOut" }}
             >
               <GeneratorWorkspace />
             </motion.div>
-          </motion.div>
+          {/* </motion.div> */}
 
-          <motion.div 
+          {/* <motion.div 
             className="workspace-brands"
             initial="hidden"
             whileInView="visible"
@@ -159,7 +160,7 @@ const HomePage = () => {
           >
             <h4 className='platform'>Experience the full Audio AI platform</h4>
             <motion.button whileHover={{ scale: 1.05 }} className="btn-signup">Sign up</motion.button>
-          </motion.div>
+          </motion.div> */}
 
           <motion.div 
             className="trusted-brands"
