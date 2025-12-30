@@ -247,7 +247,7 @@ const HomePage = () => {
                 </div>
                 <div className="vg-footer">
                   <div className="vg-trusted-logo">TIME ↗</div>
-                  <div className="vg-trusted-text">uses Studio for high-quality, long-form Text to Speech at sc...</div>
+                  <div className="vg-trusted-text">uses Studio for high-quality, long-form Text to Speech..</div>
                   <button className="vg-cta">GET STARTED FREE</button>
                 </div>
               </motion.div>
@@ -434,7 +434,7 @@ const HomePage = () => {
                 <div className="vg-footer">
                   <div className="vg-trusted">
                     <span className="vg-trusted-logo">TIME ↗</span>
-                    <span className="vg-trusted-text">uses Studio for high-quality, long-form Text to Speech at sc...</span>
+                    <span className="vg-trusted-text">uses Studio for high-quality, long-form Text to Speech..</span>
                   </div>
                   <button className="vg-cta">GET STARTED FREE</button>
                 </div>

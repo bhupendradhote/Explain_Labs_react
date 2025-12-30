@@ -646,16 +646,16 @@ border-radius: 12px;
 }
 
 .vg-trusted{
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: #fff;
-  padding: 8px 12px;
-  border-radius: 22px;
-  box-shadow: var(--card-shadow);
-  border: 1px solid rgba(0,0,0,0.04);
-  font-size: 13px;
-  color: var(--muted);
+display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    padding: 8px 12px;
+    border-radius: 22px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(0, 0, 0, .04);
+    font-size: 13px;
+    color: var(--muted);
 }
 
 .vg-trusted-logo{
