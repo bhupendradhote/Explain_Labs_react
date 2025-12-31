@@ -162,7 +162,7 @@ const HomePage = () => {
             <motion.button whileHover={{ scale: 1.05 }} className="btn-signup">Sign up</motion.button>
           </motion.div> */}
 
-          <motion.div 
+          {/* <motion.div 
             className="trusted-brands"
             initial="hidden"
             whileInView="visible"
@@ -173,7 +173,7 @@ const HomePage = () => {
             <div className="brand-logos">
               <img src={clients} alt="Trusted Brands" className="brands-img" />
             </div>
-          </motion.div>
+          </motion.div> */}
 
           <div className="dis_btns">
             <motion.button whileHover={{ scale: 1.05 }} className="btn-signup">Talk to Sales</motion.button>
